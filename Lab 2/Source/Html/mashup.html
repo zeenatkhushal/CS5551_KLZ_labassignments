@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="mashup">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<head>
+
+		<title>Mashup</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="landing">
+
+		<!-- Header -->
+			<header id="header" class="alt">
+				<h1><strong><a href="index.html"></a></strong> </h1>
+				<nav id="nav">
+					
+				</nav>
+			</header>
+
+			<a href="#menu" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+
+		<!-- Banner -->
+			<section id="banner">
+				<h2>Assignment # 2</h2>
+				<p>Advance Software Engineering - CS5551</p>
+				
+			</section><br><br>
+
+
+<div ng-controller="mycont">
+    <h1  style="text-align: center; color:#ffffff">Search Here</h1>
+    <input type="text" style="margin-left:0px" ng-model="input" placeholder="Knowledge search" class="in"/>
+    <button type="submit" ng-click="fuck()" class="bt">Search</button>
+    <p id="out"></p>
+<div id="se" style="display:none">
+    <p ng-model="final">
+    <TABLE BORDER=2 CELLPADDING=4> <TR> <TH style="color: aliceblue; background:sienna" COLSPAN=2>Search From Using Google knowledge Graph API </TH> </TR>
+        <TR> <TD>Search Name</TD> <TD>{{final.name}}</TD> </TR>
+        <TR> <TD>Description</TD> <TD>{{final.disc}}</TD> </TR>
+        <TR> <TD>Wiki Image</TD> <TD><a href={{final.link}}>Wiki Image </a> </TD> </TR>
+    <TR> <TD>Detailed Description</TD> <TD>{{final.detailed}}</TD> </TR>
+    <TR><Td>Wiki Page</Td> <td><a href="{{final.wiki}}">Wiki Page </a> </td></TR>
+    <TR> <TD>Website</TD> <TD>{{final.web}}</TD> </TR>
+</TABLE>
+    <button type="submit" style="margin-left: 200px" ng-click="translate(final.detailed)" class="bt">Language Translate</button>
+<h3 style="text-align: center;background-color: #fefefe" id="lg"></h3>
+    <P id="trans" style="background-color: #fefefe">
+    </P>
+    <input ng-click="voice(final.detailed)" style="margin-left: 200px"  type='button' value='🔊 Play' class="bt" />
+   
+
+    </p>
+
+</div>
+    <div style="display:none;margin-left: 470px" id="dis">
+    
+        </div>
+</div>
+<script src="../JS/app.js"></script>
+<script src="http://code.responsivevoice.org/responsivevoice.js"></script>	
+		<!-- Footer -->
+			<footer id="footer">
+				
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

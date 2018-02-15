@@ -1,0 +1,149 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Welcome to Zeenat & Khushal Website</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="landing">
+
+	
+			<header id="header" class="alt">
+				<h1><strong><a href="index.html">Assignment # 2</a></strong> </h1>
+				<nav id="nav">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="aboutus.html">About Us</a></li>
+						<li><a href="contactus.html">Contact Us</a></li>
+					</ul>
+				</nav>
+			</header>
+
+			<a href="#menu" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+
+		
+			<section id="banner">
+				<h2>Assignment # 2</h2>
+				<p>Advance Software Engineering - CS5551</p>
+				
+			</section>
+
+<div class="login" ng-controller="mycontroller" style="margin-left: 400px;margin-top: 200px;">
+    <p class="form-title" style="margin-left: 0px">SIGN IN</p>
+    <input type="text" placeholder="Username" class="in" id="user"/></br>
+    <input type="password" placeholder="Password" class="in" id="pass" /></br></br>
+    <input type="submit" value="Sign In" class="btn" onclick="get()"></br>
+    <br><br>
+
+    <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"  ></div>
+    <label style="margin-left: 0px">Login With Facebook</label>
+<div class="container">
+					<ul class="icons">
+						<li><a href="#" class="icon fa-facebook"></a></li>
+						
+					</ul>
+					
+				</div>
+   <div style="margin-left: 60px"> 
+<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+    </fb:login-button></div>
+</div>
+<script src="../JS/app.js"></script>
+<script>
+    
+    function statusChangeCallback(response) {
+        console.log('statusChangeCallback');
+        console.log(response);
+       
+        if (response.status === 'connected') {
+           
+            testAPI();
+        } else if (response.status === 'not_authorized') {
+           
+            document.getElementById('status').innerHTML = 'Please log ' +
+                'into this app.';
+        } else {
+            
+            document.getElementById('status').innerHTML = 'Please log ' +
+                'into Facebook.';
+        }
+    }
+    function checkLoginState() {
+        FB.getLoginStatus(function(response) {
+            statusChangeCallback(response);
+        });
+    }
+
+    window.fbAsyncInit = function() {
+        FB.init({
+            appId      : '166394557338513',
+            cookie     : false,  
+                                
+            xfbml      : true, 
+            version    : 'v2.8' 
+        });
+        FB.getLoginStatus(function(response) {
+            statusChangeCallback(response);
+        });
+
+    };
+
+   
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+
+   
+    function testAPI() {
+        console.log('Welcome!  Fetching your information.... ');
+        FB.api('/me', function(response) {
+            console.log('Successful login for: ' + response.name);
+            document.getElementById('status').innerHTML =
+                'Thanks for logging in, ' + response.name + '!';
+        });
+    }
+function get() {
+    localStorage.setItem("username","zeenatkhushal");
+    localStorage.setItem("password","zeenatkhushal");
+    if(document.getElementById("user").value ==="" |document.getElementById("pass").value ==="" )
+    {
+        alert("Please enter all your details!");
+    }
+    else {
+        if (localStorage.getItem("username") === document.getElementById("user").value & document.getElementById("user").value !== " ") {
+
+            if (localStorage.getItem("password") === document.getElementById("pass").value) {
+
+                window.location = "Html/mashup.html";
+            }
+            else {
+                alert("Please enter correct details");
+            }
+        }
+        else {
+            alert("Please enter correct details!");
+        }
+    }
+}
+</script>
+
+			
+		<!-- Footer -->
+			<footer id="footer">
+				
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
