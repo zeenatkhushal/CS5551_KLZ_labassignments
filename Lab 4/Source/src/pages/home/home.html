@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic Intelligent Application
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  
+  <p> Designed by Zeenat Tariq and Khushal Shah
+      INSTRUCTION: Please press start Scan to scan the Bar code or QR code of the Product Thank You
+    
+  </p>
+  <h1>
+    <button ion-button color="dark" full round (click)="scan()">Start Scan</button>
+  </h1>
+
+  <ion-card *ngIf="productFound">
+    <ion-card-header>
+      <h2>Price: $ {{selectedProduct.price}}</h2>
+    </ion-card-header>
+    <ion-card-content>
+      <ul>
+        <li>{{selectedProduct.plu}}</li>
+        <li>{{selectedProduct.name}}</li>
+        <li>{{selectedProduct.desc}}</li>
+      </ul>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
