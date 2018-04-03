@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Youtube Search CURD by Zeenat & Khushal</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+  <style>
+    .mashup-body {
+      background-image: url("new.jpg");
+    }
+
+    .outerContainer {
+      border-style: solid;
+      border-radius: 5px;
+      border-color:black;
+      margin: 10px;
+    }
+    .savedRecords {
+      box-shadow: 0 4px 8px 0 rgba(15, 1, 1, 0.86);
+      transition: 0.3s;
+      border-radius: 5px;
+      margin-left: 10px;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      padding-bottom: 5px;
+      padding-right: 5px;
+      background-color: darkgray;
+    }
+    .savedRecords.container {
+      padding: 0px 16px;
+    }
+    .savedRecords.description {
+      width: 90px;
+      overflow-wrap: break-word;
+    }
+body {
+    color: white;
+}
+
+    .card {
+      box-shadow: 0 4px 8px 0 rgba(15, 1, 1, 0.86);
+      transition: 0.3s;
+      width: 482px;
+      border-radius: 5px;
+      margin-left: 30px;
+      margin-top: 20px;
+      padding-bottom: 5px;
+      background-color: darkgray;
+    }
+
+    .card:hover {
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 1);
+    }
+
+    img {
+      border-radius: 5px 5px 0 0;
+    }
+
+    .container {
+      padding: 2px 16px;
+    }
+
+    .videoDescription {
+      width: 470px;
+      overflow-wrap: break-word;
+    }
+
+    .logoutButton {
+      margin-right: 5px;
+      /*margin-top: -80px;*/
+    }
+
+    .bbbbbb {
+      margin-top: -15px;
+      padding-bottom: 15px;
+    }
+  </style>
+
+  <script type="text/javascript" src="http://code.angularjs.org/1.1.1/angular.js"></script>
+  <script type="text/javascript" src="http://code.angularjs.org/1.1.1/angular-resource.js"></script>
+  <script type="text/javascript" src="http://code.angularjs.org/1.1.1/angular-sanitize.js"></script>
+  <script type="text/javascript" src="js/index.js"></script>
+
+</head>
+
+<body class="mashup-body" text=white>
+<form name="loginForm" method="post" action="Home.html">
+<table width="20%" bgcolor="0099CC" align="center">
+
+
+<br><br><br><br><br><br><br><br>
+<tr>
+<td colspan=2><center><font size=4><b>Login Here</b></font></center></td>
+</tr>
+
+<tr>
+<td>Username:</td>
+<td><input type="text" size=25 name="userid"></td>
+</tr>
+
+<tr>
+<td>Password:</td>
+<td><input type="Password" size=25 name="pwd"></td>
+</tr>
+
+<tr>
+<td ><input type="Reset"></td>
+<td><input type="submit" onclick="return check(this.form)" value="Login"></td>
+</tr>
+
+</table>
+</form>
+<script language="javascript">
+function check(form)
+{
+
+if(form.userid.value == "khushal" && form.pwd.value == "zeenat")
+{
+	return true;
+}
+else
+{
+	alert("Error Password or Username")
+	return false;
+}
+}
+</script>
+
+</body>
+
+</html>
+
